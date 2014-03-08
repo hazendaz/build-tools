@@ -11,11 +11,13 @@ Requires Maven 3.0.4 or better.
 After running `mvn clean install` against this project, simply add the dependency to your pom for use with such
 plugins as maven-java-formatter-plugin.
 
-`<dependency>
+```
+<dependency>
     <groupId>com.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
     <version>1.0.0</version>
-</dependency>`
+</dependency>
+```
 
 This project currently only contains information for maven-java-formatter-plugin to format using eclipse style formatter.
 
@@ -34,11 +36,13 @@ Type:
 
 And add dependency to your pom.
 
-`<dependency>
+```
+<dependency>
     <groupId>com.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
     <version>1.0.0</version>
-</dependency>`
+</dependency>
+```
 
 Run `mvn clean install` against your own project and watch it format away.
 
