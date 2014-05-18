@@ -15,11 +15,13 @@ plugins as maven-java-formatter-plugin.
 <dependency>
     <groupId>com.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
 This project currently only contains information for maven-java-formatter-plugin to format using eclipse style formatter.
+
+Site page is located [here](http://hazendaz.github.io/build-tools/)
 
 ## Introduction ##
 
@@ -40,7 +42,7 @@ And add dependency to your pom.
 <dependency>
     <groupId>com.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
