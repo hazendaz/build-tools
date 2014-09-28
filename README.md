@@ -1,5 +1,7 @@
 ﻿# build-tools #
 
+![hazendaz](https://github.com/hazendaz/build-tools/blob/master/src/site/resources/images/hazendaz-banner.jpg)
+
 ## Quick Start ##
 
 Configuration Tools for maven builds
