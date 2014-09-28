@@ -6,7 +6,7 @@ Configuration Tools for maven builds
 
 Download this project and run `mvn clean install`.
 
-Requires Maven 3.0.4 or better.
+Requires Maven 3.0.5 or better.
 
 After running `mvn clean install` against this project, simply add the dependency to your pom for use with such
 plugins as maven-java-formatter-plugin.
