@@ -5,7 +5,7 @@
     <prerequisites>
         <maven>3.2.3</maven>
     </prerequisites>
-    <groupId>com.hazendaz</groupId>
+    <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
     <version>1.0.2</version>
     <packaging>jar</packaging>
