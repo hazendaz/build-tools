@@ -42,7 +42,11 @@
                       <li class="dropdown-submenu">
                                       <a href="project-info.html"  title="Project Information">Project Information</a>
               <ul class="dropdown-menu">
+                                  <li>      <a href="integration.html"  title="Continuous Integration">Continuous Integration</a>
+</li>
                                   <li>      <a href="dependency-info.html"  title="Dependency Information">Dependency Information</a>
+</li>
+                                  <li>      <a href="distribution-management.html"  title="Distribution Management">Distribution Management</a>
 </li>
                                   <li>      <a href="index.html"  title="About">About</a>
 </li>
@@ -66,6 +70,12 @@
                       <li class="dropdown-submenu">
                                       <a href="project-reports.html"  title="Project Reports">Project Reports</a>
               <ul class="dropdown-menu">
+                                  <li>      <a href="changelog.html"  title="Change Log">Change Log</a>
+</li>
+                                  <li>      <a href="file-activity.html"  title="File Activity">File Activity</a>
+</li>
+                                  <li>      <a href="dev-activity.html"  title="Developer Activity">Developer Activity</a>
+</li>
                                   <li>      <a href="dependency-updates-report.html"  title="Dependency Updates Report">Dependency Updates Report</a>
 </li>
                                   <li>      <a href="plugin-updates-report.html"  title="Plugin Updates Report">Plugin Updates Report</a>
@@ -117,7 +127,7 @@
                   <li id="publishDate">Last Published: 2015-05-06
                       <span class="divider">|</span>
                    </li>
-                  <li id="projectVersion">Version: 1.1.0
+                  <li id="projectVersion">Version: 1.1.1-SNAPSHOT
                       </li>
                       
                 
@@ -134,7 +144,7 @@
                     
                 <ul class="nav nav-list">
                     <li class="nav-header">Project Documentation</li>
-                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                              
       <li>
   
                           <a href="project-info.html" title="Project Information">
@@ -142,10 +152,24 @@
         Project Information</a>
                     <ul class="nav nav-list">
                     
+      <li>
+  
+                          <a href="integration.html" title="Continuous Integration">
+          <i class="none"></i>
+        Continuous Integration</a>
+            </li>
+                    
       <li class="active">
   
             <a href="#"><i class="none"></i>Dependency Information</a>
           </li>
+                    
+      <li>
+  
+                          <a href="distribution-management.html" title="Distribution Management">
+          <i class="none"></i>
+        Distribution Management</a>
+            </li>
                     
       <li>
   
@@ -204,7 +228,7 @@
             </li>
               </ul>
         </li>
-                                                                                                      
+                                                                                                                                                            
       <li>
   
                           <a href="project-reports.html" title="Project Reports">
@@ -240,36 +264,36 @@
 <pre>&lt;dependency&gt;
   &lt;groupId&gt;com.github.hazendaz&lt;/groupId&gt;
   &lt;artifactId&gt;build-tools&lt;/artifactId&gt;
-  &lt;version&gt;1.1.0&lt;/version&gt;
+  &lt;version&gt;1.1.1-SNAPSHOT&lt;/version&gt;
 &lt;/dependency&gt;</pre></div></div>
 <div class="section">
 <h3><a name="Apache_Buildr"></a>Apache Buildr</h3><a name="Apache_Buildr"></a>
 <div class="source">
-<pre>'com.github.hazendaz:build-tools:jar:1.1.0'</pre></div></div>
+<pre>'com.github.hazendaz:build-tools:jar:1.1.1-SNAPSHOT'</pre></div></div>
 <div class="section">
 <h3><a name="Apache_Ivy"></a>Apache Ivy</h3><a name="Apache_Ivy"></a>
 <div class="source">
-<pre>&lt;dependency org=&quot;com.github.hazendaz&quot; name=&quot;build-tools&quot; rev=&quot;1.1.0&quot;&gt;
+<pre>&lt;dependency org=&quot;com.github.hazendaz&quot; name=&quot;build-tools&quot; rev=&quot;1.1.1-SNAPSHOT&quot;&gt;
   &lt;artifact name=&quot;build-tools&quot; type=&quot;jar&quot; /&gt;
 &lt;/dependency&gt;</pre></div></div>
 <div class="section">
 <h3><a name="Groovy_Grape"></a>Groovy Grape</h3><a name="Groovy_Grape"></a>
 <div class="source">
 <pre>@Grapes(
-@Grab(group='com.github.hazendaz', module='build-tools', version='1.1.0')
+@Grab(group='com.github.hazendaz', module='build-tools', version='1.1.1-SNAPSHOT')
 )</pre></div></div>
 <div class="section">
 <h3><a name="Grails"></a>Grails</h3><a name="Grails"></a>
 <div class="source">
-<pre>compile 'com.github.hazendaz:build-tools:1.1.0'</pre></div></div>
+<pre>compile 'com.github.hazendaz:build-tools:1.1.1-SNAPSHOT'</pre></div></div>
 <div class="section">
 <h3><a name="Leiningen"></a>Leiningen</h3><a name="Leiningen"></a>
 <div class="source">
-<pre>[com.github.hazendaz/build-tools &quot;1.1.0&quot;]</pre></div></div>
+<pre>[com.github.hazendaz/build-tools &quot;1.1.1-SNAPSHOT&quot;]</pre></div></div>
 <div class="section">
 <h3><a name="SBT"></a>SBT</h3><a name="SBT"></a>
 <div class="source">
-<pre>libraryDependencies += &quot;com.github.hazendaz&quot; % &quot;build-tools&quot; % &quot;1.1.0&quot;</pre></div></div></div>
+<pre>libraryDependencies += &quot;com.github.hazendaz&quot; % &quot;build-tools&quot; % &quot;1.1.1-SNAPSHOT&quot;</pre></div></div></div>
                   </div>
             </div>
           </div>
