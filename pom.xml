@@ -76,7 +76,6 @@
         <tag>HEAD</tag>
         <url>https://github.com/hazendaz/build-tools</url>
     </scm>
-
     <issueManagement>
         <system>Github</system>
         <url>https://github.com/hazendaz/build-tools/issues</url>
@@ -97,6 +96,7 @@
         <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -393,6 +393,7 @@
             </extension>
         </extensions>
     </build>
+
     <reporting>
         <plugins>
             <plugin>
@@ -421,6 +422,7 @@
             </plugin>
         </plugins>
     </reporting>
+
     <profiles>
         <profile>
             <id>sort</id>
