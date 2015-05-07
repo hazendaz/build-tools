@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <prerequisites>
-        <maven>3.2.3</maven>
-    </prerequisites>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+        <relativePath />
+    </parent>
+
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
     <version>1.1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+
     <name>build-tools</name>
-    <description>Maven Build Tools</description>
+    <description>Maven Build Tools is a Configuraton Jar file that can be used with various plugins.</description>
     <url>https://github.com/hazendaz/build-tools</url>
     <inceptionYear>2014</inceptionYear>
     <organization>
         <name>hazendaz</name>
         <url>https://github.com/hazendaz/</url>
     </organization>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>manual</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
     <developers>
         <developer>
             <id>jlandis</id>
@@ -50,30 +65,34 @@
             </properties>
         </contributor>
     </contributors>
-    <issueManagement>
-        <system>Github</system>
-        <url>https://github.com/hazendaz/build-tools/issues</url>
-    </issueManagement>
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>manual</distribution>
-            <comments>A business-friendly OSS license</comments>
-        </license>
-    </licenses>
+
+    <prerequisites>
+        <maven>3.1.1</maven>
+    </prerequisites>
+
     <scm>
         <connection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</developerConnection>
         <tag>HEAD</tag>
         <url>https://github.com/hazendaz/build-tools</url>
     </scm>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/hazendaz/build-tools/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>travis-ci</system>
+        <url>https://travis-ci.org/hazendaz/build-tools</url>
+    </ciManagement>
+
     <properties>
+        <copyright>2015</copyright>
         <github.global.server>github</github.global.server>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
-        <maven.min-version>3.2.3</maven.min-version>
+        <maven.min-version>3.1.1</maven.min-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -98,6 +117,11 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-changelog-plugin</artifactId>
+                    <version>2.3</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>2.6.1</version>
                 </plugin>
@@ -105,6 +129,10 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.3</version>
+                    <configuration>
+                        <!-- Slightly faster builds, see https://jira.codehaus.org/browse/MCOMPILER-209 -->
+                        <useIncrementalCompilation>false</useIncrementalCompilation>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -120,6 +148,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>1.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>1.6</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -160,6 +193,19 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.4</version>
+                    <!-- For reporting only of versions -->
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.skins</groupId>
+                            <artifactId>maven-fluido-skin</artifactId>
+                            <version>1.3.1</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.wagon</groupId>
+                            <artifactId>wagon-ssh</artifactId>
+                            <version>2.9</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>com.github.github</groupId>
@@ -183,6 +229,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.18.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>tidy-maven-plugin</artifactId>
+                    <version>1.0-beta-1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -229,6 +280,7 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <!-- Delete all from target but not target itself -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -271,6 +323,7 @@
                         </manifest>
                         <manifestEntries>
                             <Build-Time>${maven.build.timestamp}</Build-Time>
+                            <copyright>${copyright}</copyright>
                             <Git-Revision>${git.commit.id}</Git-Revision>
                             <Os-Name>${os.name}</Os-Name>
                             <Os-Arch>${os.arch}</Os-Arch>
@@ -279,9 +332,10 @@
                             <X-Compile-Target-JDK>${maven.compiler.target}</X-Compile-Target-JDK>
                         </manifestEntries>
                     </archive>
+                    <skipIfEmpty>true</skipIfEmpty>
                 </configuration>
             </plugin>
-             <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <configuration>
@@ -331,9 +385,20 @@
                 </executions>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.9</version>
+            </extension>
+        </extensions>
     </build>
     <reporting>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -346,10 +411,75 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
             </plugin>
+            <!-- This plugin will fail if any POM is marked as Byte Order 
+                Mark is UTF-8 (BOM). If this occurs, create a new POM and move the contents 
+                in order to fix. For reference, this was a problem with mybatis/mybatis-spring 
+                poms. -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </reporting>
+    <profiles>
+        <profile>
+            <id>sort</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>tidy-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>pom</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>eclipse</id>
+            <activation>
+                <property>
+                    <name>m2e.version</name>
+                </property>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <!--This plugin's configuration is used to store 
+                            Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+                        <plugin>
+                            <groupId>org.eclipse.m2e</groupId>
+                            <artifactId>lifecycle-mapping</artifactId>
+                            <version>1.0.0</version>
+                            <configuration>
+                                <lifecycleMappingMetadata>
+                                    <pluginExecutions>
+                                        <pluginExecution>
+                                            <pluginExecutionFilter>
+                                                <groupId>org.apache.maven.plugins</groupId>
+                                                <artifactId>maven-enforcer-plugin</artifactId>
+                                                <versionRange>[1.4,)</versionRange>
+                                                <goals>
+                                                    <goal>enforce</goal>
+                                                </goals>
+                                            </pluginExecutionFilter>
+                                            <action>
+                                                <ignore />
+                                            </action>
+                                        </pluginExecution>
+                                    </pluginExecutions>
+                                </lifecycleMappingMetadata>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
 </project>
