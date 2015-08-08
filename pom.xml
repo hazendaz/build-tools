@@ -10,6 +10,8 @@
         <relativePath />
     </parent>
 
+    <!-- TODO: Do not release until dependencies are aggrated and out of next base-parent -->
+
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
     <version>1.1.2-SNAPSHOT</version>
