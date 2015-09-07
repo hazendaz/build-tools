@@ -10,7 +10,7 @@
         <relativePath />
     </parent>
 
-    <!-- TODO: Do not release until dependencies are aggrated and out of next base-parent -->
+    <!-- TODO: Do not release until dependencies are aggregated and out of next base-parent (chicken/egg solution) -->
 
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
