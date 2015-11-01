@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.github.hazendaz</groupId>
         <artifactId>base-parent</artifactId>
-        <version>7</version>
+        <version>9</version>
         <relativePath />
     </parent>
 
