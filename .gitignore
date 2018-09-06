@@ -4,3 +4,4 @@
 /.project
 /target
 .mvn/wrapper/maven-wrapper.jar
+/.apt_generated_tests/
