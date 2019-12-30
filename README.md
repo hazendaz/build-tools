@@ -12,16 +12,16 @@ Configuration Tools for maven builds
 
 Download this project and run `mvn clean install`.
 
-Requires Maven 3.0.5 or better.
+Requires Maven 3.6.3 or better.
 
 After running `mvn clean install` against this project, simply add the dependency to your pom for use with such
 plugins as maven-java-formatter-plugin.
 
 ```
 <dependency>
-    <groupId>com.hazendaz</groupId>
+    <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.0.1</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
@@ -31,8 +31,15 @@ Site page is located [here](http://hazendaz.github.io/build-tools/)
 
 ## Introduction ##
 
-This project is intended to be a helper jar for maven builds rather than deployments.  In the current iteration, it only
-has eclipse code formatter xml to be used with maven-java-formatter-plugin to format code.
+This project is intended to be a helper jar for maven builds rather than deployments.  Current usage with the following:
+
+- checkstyle (2 and 4 space)
+- eclipse-formatter (2 and 4 space) with usage:
+    - css
+    - html
+    - java
+    - javascript
+    - xml
 
 ## Installation ##
 
@@ -46,9 +53,9 @@ And add dependency to your pom.
 
 ```
 <dependency>
-    <groupId>com.hazendaz</groupId>
+    <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.0.1</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
