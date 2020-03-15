@@ -251,6 +251,9 @@
         <module name="AbbreviationAsWordInName">
             <property name="ignoreFinal" value="false"/>
             <property name="allowedAbbreviationLength" value="1"/>
+            <!-- Start: We allow some abbreviations -->
+            <property name="allowedAbbreviations" value="XML,URL"
+            <!-- End: We allow some abbreviations -->
             <property name="tokens"
              value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
                     PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF"/>
