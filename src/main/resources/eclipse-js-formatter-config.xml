@@ -29,7 +29,7 @@
 <setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_assignment" value="0"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_binary_expression" value="16"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_compact_if" value="16"/>
-<setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_conditional_expression" value="80"/>
+<setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_conditional_expression" value="120"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_enum_constants" value="0"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_expressions_in_array_initializer" value="16"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.alignment_for_multiple_fields" value="16"/>
@@ -76,7 +76,7 @@
 <setting id="org.eclipse.wst.jsdt.core.formatter.comment.indent_root_tags" value="true"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.comment.insert_new_line_before_root_tags" value="insert"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.comment.insert_new_line_for_parameter" value="insert"/>
-<setting id="org.eclipse.wst.jsdt.core.formatter.comment.line_length" value="80"/>
+<setting id="org.eclipse.wst.jsdt.core.formatter.comment.line_length" value="120"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.compact_else_if" value="true"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.continuation_indentation" value="2"/>
 <setting id="org.eclipse.wst.jsdt.core.formatter.continuation_indentation_for_array_initializer" value="2"/>
