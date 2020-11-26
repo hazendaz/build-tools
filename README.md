@@ -1,6 +1,6 @@
 ﻿# build-tools #
 
-[![Java CI](https://github.com/hazendaz/build-tools/workflows/Java%20CI/badge.svg)](https://github.com/hazendaz/build-tools/workflows/Java%20CI)
+[![Java CI](https://github.com/hazendaz/build-tools/workflows/Java%20CI/badge.svg)](https://github.com/hazendaz/build-tools/actions?query=workflow%3A%22Java+CI%22)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/com.github.hazendaz/build-tools/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.hazendaz/build-tools)
 ![hazendaz](https://github.com/hazendaz/build-tools/blob/master/src/site/resources/images/hazendaz-banner.jpg)
 
