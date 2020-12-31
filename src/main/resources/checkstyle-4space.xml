@@ -1,4 +1,19 @@
 <?xml version="1.0"?>
+<!--
+
+    build-tools (https://github.com/hazendaz/build-tools)
+
+    Copyright (c) 2011 - 2020 Hazendaz.
+
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of The Apache Software License,
+    Version 2.0 which accompanies this distribution, and is available at
+    http://www.apache.org/licenses/LICENSE-2.0.txt
+
+    Contributors:
+        Hazendaz (Jeremy Landis).
+
+-->
 <!DOCTYPE module PUBLIC
           "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
           "https://checkstyle.org/dtds/configuration_1_3.dtd">
@@ -42,7 +57,9 @@
 
   <module name="LineLength">
     <property name="fileExtensions" value="java"/>
-    <property name="max" value="100"/>
+    <!-- Start: We want 120 instead of google's 100 -->
+    <property name="max" value="120"/>
+    <!-- End: We want 120 instead of google's 100 -->
     <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
   </module>
 
@@ -135,10 +152,12 @@
     <module name="UpperEll"/>
     <module name="ModifierOrder"/>
     <module name="EmptyLineSeparator">
+      <!-- Start: We remove 'PACKAGE_DEF' to avoid empty line between package and header -->
       <property name="tokens"
-               value="PACKAGE_DEF, IMPORT, STATIC_IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF,
+               value="IMPORT, STATIC_IMPORT, CLASS_DEF, INTERFACE_DEF, ENUM_DEF,
                     STATIC_INIT, INSTANCE_INIT, METHOD_DEF, CTOR_DEF, VARIABLE_DEF, RECORD_DEF,
                     COMPACT_CTOR_DEF"/>
+      <!-- End: We remove 'PACKAGE_DEF' to avoid empty line between package and header -->
       <property name="allowNoEmptyLineBetweenFields" value="true"/>
     </module>
     <module name="SeparatorWrap">
@@ -240,17 +259,22 @@
       <message key="ws.notPreceded"
              value="GenericWhitespace ''{0}'' is not preceded with whitespace."/>
     </module>
+    <!-- Start: We want double the spacing that google uses -->
     <module name="Indentation">
-      <property name="basicOffset" value="2"/>
-      <property name="braceAdjustment" value="2"/>
-      <property name="caseIndent" value="2"/>
-      <property name="throwsIndent" value="4"/>
-      <property name="lineWrappingIndentation" value="4"/>
-      <property name="arrayInitIndent" value="2"/>
+      <property name="basicOffset" value="4"/>
+      <property name="braceAdjustment" value="4"/>
+      <property name="caseIndent" value="4"/>
+      <property name="throwsIndent" value="8"/>
+      <property name="lineWrappingIndentation" value="8"/>
+      <property name="arrayInitIndent" value="4"/>
     </module>
+    <!-- End: We want double the spacing that google uses -->
     <module name="AbbreviationAsWordInName">
       <property name="ignoreFinal" value="false"/>
       <property name="allowedAbbreviationLength" value="0"/>
+      <!-- Start: We allow some abbreviations -->
+      <property name="allowedAbbreviations" value="XML,URL"/>
+      <!-- End: We allow some abbreviations -->
       <property name="tokens"
                value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
                     PARAMETER_DEF, VARIABLE_DEF, METHOD_DEF, PATTERN_VARIABLE_DEF, RECORD_DEF,
