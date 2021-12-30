@@ -45,8 +45,8 @@
         <url>https://github.com/hazendaz/build-tools/issues</url>
     </issueManagement>
     <ciManagement>
-        <system>travis-ci</system>
-        <url>https://travis-ci.org/hazendaz/build-tools</url>
+        <system>Github</system>
+        <url>https://github.com/hazendaz/build-tools/actions</url>
     </ciManagement>
 
 </project>
