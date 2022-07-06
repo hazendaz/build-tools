@@ -48,5 +48,12 @@
         <system>Github</system>
         <url>https://github.com/hazendaz/build-tools/actions</url>
     </ciManagement>
+    <distributionManagement>
+        <site>
+            <id>gh-pages-scm</id>
+            <name>GitHub Pages</name>
+            <url>scm:git:ssh://git@github.com/hazendaz/build-tools.git</url>
+        </site>
+    </distributionManagement>
 
 </project>
