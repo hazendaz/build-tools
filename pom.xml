@@ -33,7 +33,7 @@
     <description>Maven Build Tools is a Configuraton Jar file that can be used with various plugins.</description>
     <url>https://github.com/hazendaz/build-tools</url>
     <inceptionYear>2014</inceptionYear>
- 
+
     <scm>
         <connection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</developerConnection>
