@@ -37,8 +37,8 @@
     <scm>
         <connection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</developerConnection>
-        <url>https://github.com/hazendaz/build-tools</url>
         <tag>HEAD</tag>
+        <url>https://github.com/hazendaz/build-tools</url>
     </scm>
     <issueManagement>
         <system>Github</system>
