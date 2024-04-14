@@ -38,7 +38,24 @@
   <property name="severity" value="${org.checkstyle.google.severity}" default="warning"/>
 
   <property name="fileExtensions" value="java, properties, xml"/>
-  <!-- Excludes all 'module-info.java' files              -->
+
+  <!-- Start: Build Tools Additional Options -->
+
+  <!-- Checks whether files end with a new line.                                         -->
+  <!-- See https://checkstyle.org/checks/misc/newlineatendoffile.html#NewlineAtEndOfFile -->
+  <module name="NewlineAtEndOfFile"/>
+
+  <!-- Checks that property files contain the same keys.                   -->
+  <!-- See https://checkstyle.org/checks/misc/translation.html#Translation -->
+  <module name="Translation"/>
+
+  <!-- Checks for long source files.                                      -->
+  <!-- See https://checkstyle.org/checks/sizes/filelength.html#FileLength -->
+  <module name="FileLength"/>
+
+  <!-- End: Build Tools Additional Options -->
+
+  <!-- Excludes all 'module-info.java' files             -->
   <!-- See https://checkstyle.org/filefilters/index.html -->
   <module name="BeforeExecutionExclusionFileFilter">
     <property name="fileNamePattern" value="module\-info\.java$"/>
@@ -67,6 +84,16 @@
     <property name="eachLine" value="true"/>
   </module>
 
+  <!-- Start: Build Tools Additional Options -->
+  <!-- Checks for trailing whitespace                      -->
+  <!-- See https://checkstyle.org/checks/regexp/index.html -->
+  <module name="RegexpSingleline">
+    <!-- \s matches whitespace character, $ matches end of line. -->
+    <property name="format" value="\s+$"/>
+    <property name="message" value="Line has trailing spaces."/>
+  </module>
+  <!-- End: Build Tools Additional Options -->
+
   <module name="LineLength">
     <property name="fileExtensions" value="java"/>
     <!-- Start: We want 120 instead of google's 100 -->
@@ -77,6 +104,65 @@
   </module>
 
   <module name="TreeWalker">
+
+    <!-- Start: Build Tools Additional Options -->
+
+    <!-- Checks for Naming Conventions                -->
+    <!-- See https://checkstyle.org/naming/index.html -->
+    <module name="ConstantName">
+      <property name="format" value="^logger?|[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$"/>
+    </module>
+    <module name="LocalFinalVariableName"/>
+    <module name="StaticVariableName"/>
+
+    <!-- Checks for imports                                   -->
+    <!-- See https://checkstyle.org/checks/imports/index.html -->
+    <module name="IllegalImport"/> <!-- defaults to sun.* packages -->
+    <module name="RedundantImport"/>
+    <module name="UnusedImports"/>
+
+    <!-- Checks for Size Violations                         -->
+    <!-- See https://checkstyle.org/checks/sizes/index.html -->
+    <module name="MethodLength"/>
+    <module name="ParameterNumber"/>
+
+    <!-- Checks for whitespace                                   -->
+    <!-- See https://checkstyle.org/checks/whitespace/index.html -->
+    <module name="EmptyForIteratorPad"/>
+    <module name="NoWhitespaceAfter"/>
+    <module name="TypecastParenPad"/>
+
+    <!-- Modifier Checks                                                                     -->
+    <!-- See https://checkstyle.org/checks/modifier/redundantmodifier.html#RedundantModifier -->
+    <module name="RedundantModifier"/>
+
+    <!-- Checks for blocks.  You know, those {}'s                                          -->
+    <!-- See https://checkstyle.org/checks/blocks/avoidnestedblocks.html#AvoidNestedBlocks -->
+    <module name="AvoidNestedBlocks"/>
+
+    <!-- Checks for common coding problems                   -->
+    <!-- See https://checkstyle.org/checks/coding/index.html -->
+    <module name="EmptyStatement"/>
+    <module name="EqualsHashCode"/>
+    <module name="HiddenField"/>
+    <module name="IllegalInstantiation"/>
+    <module name="InnerAssignment"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="SimplifyBooleanReturn"/>
+
+    <!-- Checks for class design                     -->
+    <!-- See https:checkstyle.org/checks/design/index.html -->
+    <module name="FinalClass"/>
+    <module name="HideUtilityClassConstructor"/>
+    <module name="InterfaceIsType"/>
+    <module name="VisibilityModifier"/>
+
+    <!-- Miscellaneious other checks.                -->
+    <!-- See https://checkstyle.org/checks/misc/finalparameters.html#FinalParameters -->
+    <module name="FinalParameters"/>
+
+    <!-- End: Build Tools Additional Options -->
+
     <module name="OuterTypeFilename"/>
     <module name="MatchXpath">
       <property name="id" value="singleLineCommentStartWithSpace"/>
@@ -337,7 +423,7 @@
       <property name="ignoreFinal" value="false"/>
       <property name="allowedAbbreviationLength" value="0"/>
       <!-- Start: We allow some abbreviations -->
-      <property name="allowedAbbreviations" value="XML,URL"/>
+      <property name="allowedAbbreviations" value="XML,URL,SSO"/>
       <!-- End: We allow some abbreviations -->
       <property name="tokens"
                value="CLASS_DEF, INTERFACE_DEF, ENUM_DEF, ANNOTATION_DEF, ANNOTATION_FIELD_DEF,
@@ -351,7 +437,11 @@
     <module name="CustomImportOrder">
       <property name="sortImportsInGroupAlphabetically" value="true"/>
       <property name="separateLineBetweenGroups" value="true"/>
-      <property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE"/>
+      <!-- Start: Adjust import rules as we break between each group start -->
+      <property name="customImportOrderRules" value="STATIC###SAME_PACKAGE(1)###STANDARD_JAVA_PACKAGE###SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE"/>
+      <property name="standardPackageRegExp" value="^java\."/>
+      <property name="specialImportsRegExp" value="^javax\."/>
+      <!-- End: Adjust import rules as we break between each group start -->
       <property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/>
     </module>
     <module name="MethodParamPad">
