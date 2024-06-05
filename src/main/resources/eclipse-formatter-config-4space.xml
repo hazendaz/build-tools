@@ -60,7 +60,7 @@
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_permitted_types_in_type_declaration" value="16"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_record_components" value="16"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_relational_operator" value="0"/>
-        <setting id="org.eclipse.jdt.core.formatter.alignment_for_resources_in_try" value="120"/>
+        <setting id="org.eclipse.jdt.core.formatter.alignment_for_resources_in_try" value="81"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation" value="16"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_shift_operator" value="0"/>
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_string_concatenation" value="16"/>
