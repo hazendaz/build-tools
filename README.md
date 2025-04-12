@@ -17,17 +17,17 @@ Download this project and run `mvn clean install`.
 Requires Maven 3.6.3 or better.
 
 After running `mvn clean install` against this project, simply add the dependency to your pom for use with such
-plugins as maven-java-formatter-plugin.
+plugins as checkstyle-maven-plugin and formatter-maven-plugin as a dependency to those plugins.
 
 ```
 <dependency>
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.2.0</version>
+    <version>1.4.0</version>
 </dependency>
 ```
 
-This project currently only contains information for maven-java-formatter-plugin to format using eclipse style formatter.
+This project currently only contains information for formatter-maven-plugin to format using eclipse style formatter.
 
 Site page is located [here](http://hazendaz.github.io/build-tools/)
 
@@ -37,11 +37,11 @@ This project is intended to be a helper jar for maven builds rather than deploym
 
 - checkstyle (2 and 4 space)
 - eclipse-formatter (2 and 4 space) with usage:
-    - css
-    - html
-    - java
-    - javascript
-    - xml
+- eclipse javascript
+- css formatter using cssparser
+- html formatter using jsoup
+- json formatter using jackson
+- xml formatter using customized eclipse xml formatter
 
 ## Installation ##
 
@@ -57,7 +57,7 @@ And add dependency to your pom.
 <dependency>
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.2.0</version>
+    <version>1.4.0</version>
 </dependency>
 ```
 
