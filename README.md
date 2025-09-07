@@ -23,7 +23,7 @@ plugins as checkstyle-maven-plugin and formatter-maven-plugin as a dependency to
 <dependency>
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
 </dependency>
 ```
 
@@ -35,7 +35,7 @@ Site page is located [here](http://hazendaz.github.io/build-tools/)
 
 This project is intended to be a helper jar for maven builds rather than deployments.  Current usage with the following:
 
-- checkstyle (2 and 4 space)
+- checkstyle (2 and 4 space) at checkstyle 11.0.1 with some adjustments
 - eclipse-formatter (2 and 4 space) with usage:
 - eclipse javascript
 - css formatter using cssparser
@@ -57,7 +57,7 @@ And add dependency to your pom.
 <dependency>
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
-    <version>1.4.0</version>
+    <version>1.5.0</version>
 </dependency>
 ```
 
