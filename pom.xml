@@ -6,6 +6,7 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -18,12 +19,38 @@
     <groupId>com.github.hazendaz</groupId>
     <artifactId>build-tools</artifactId>
     <version>1.5.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <name>build-tools</name>
     <description>Maven Build Tools is a Configuraton Jar file that can be used with various plugins.</description>
     <url>https://github.com/hazendaz/build-tools</url>
     <inceptionYear>2014</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>jlandis</id>
+            <name>Jeremy Landis</name>
+            <email>jeremylandis@hotmail.com</email>
+            <url>https://www.linkedin.com/in/jeremy-landis-548b2719</url>
+            <organization>hazendaz</organization>
+            <organizationUrl>https://github.com/hazendaz</organizationUrl>
+            <roles>
+                <role>Architect</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>-5</timezone>
+            <properties>
+                <picUrl>https://avatars0.githubusercontent.com/u/975267</picUrl>
+            </properties>
+        </developer>
+    </developers>
 
     <scm>
         <connection>scm:git:ssh://git@github.com/hazendaz/build-tools.git</connection>
